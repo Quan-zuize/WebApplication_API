@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApplication1.Models.Album>
+
+@{
+    ViewBag.Title = "Index";
+}
+@*@model PagedList.IPagedList<WebApplication2.Models.Exam>
+@using PagedList.Mvc*@
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "Albums", FormMethod.Get))
+{
+    <p>
+        Search: @Html.TextBox("search")
+        <input type="submit" name="name" value="Find" />
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre.GenreName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+                (Tựa Đề)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+                (Ngày Phát Hành)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+                (Giá)
+            </th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre.GenreName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Artist)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AlbumId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AlbumId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AlbumId })
+                </td>
+            </tr>
+        }
+
+    </table>
+}

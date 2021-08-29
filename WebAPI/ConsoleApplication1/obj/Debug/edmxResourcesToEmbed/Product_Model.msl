@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Product_APIModelStoreContainer" CdmEntityContainer="Product_APIEntities">
+    <EntitySetMapping Name="ProBuys">
+      <EntityTypeMapping TypeName="Product_APIModel.ProBuy">
+        <MappingFragment StoreEntitySet="ProBuys">
+          <ScalarProperty Name="ProBuyId" ColumnName="ProBuyId" />
+          <ScalarProperty Name="ProBuydate" ColumnName="ProBuydate" />
+          <ScalarProperty Name="ProId" ColumnName="ProId" />
+          <ScalarProperty Name="ProBuyPrice" ColumnName="ProBuyPrice" />
+          <ScalarProperty Name="ProNumber" ColumnName="ProNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="Product_APIModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProId" ColumnName="ProId" />
+          <ScalarProperty Name="ProName" ColumnName="ProName" />
+          <ScalarProperty Name="ProContent" ColumnName="ProContent" />
+          <ScalarProperty Name="CateId" ColumnName="CateId" />
+          <ScalarProperty Name="ProPrice" ColumnName="ProPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Product_APIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ProBuy">
+    <Key>
+      <PropertyRef Name="ProBuyId" />
+    </Key>
+    <Property Name="ProBuyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProBuydate" Type="DateTime" Precision="3" />
+    <Property Name="ProId" Type="Int32" />
+    <Property Name="ProBuyPrice" Type="Double" />
+    <Property Name="ProNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProId" />
+    </Key>
+    <Property Name="ProId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProContent" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CateId" Type="Int32" />
+    <Property Name="ProPrice" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="Product_APIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProBuys" EntityType="Self.ProBuy" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+  </EntityContainer>
+</Schema>
