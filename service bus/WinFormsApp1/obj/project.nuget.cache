@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "S5FDBILxBeYyooEWOwrd25i8SeAhWMuACJgt38kj7URfNK/ZfusSlt7tTM78CfNG9qWOxxT8JI0qNhZubsFbBw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\service_bus\\service bus\\WinFormsApp1\\WinFormsApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\m2mqtt\\4.3.0\\m2mqtt.4.3.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'M2Mqtt 4.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "M2Mqtt",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
+}
