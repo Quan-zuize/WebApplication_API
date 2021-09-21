@@ -85,3 +85,6 @@ C:\Users\ADMIN\source\repos\service_bus\service bus\WebApplication2\bin\Microsof
 C:\Users\ADMIN\source\repos\service_bus\service bus\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\ADMIN\source\repos\service_bus\service bus\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\ADMIN\source\repos\service_bus\service bus\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\ADMIN\source\repos\service_bus\service bus\WebApplication2\obj\Debug\WebApplication2.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\service_bus\service bus\WebApplication2\obj\Debug\WebApplication2.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\service_bus\service bus\WebApplication2\obj\Debug\WebApplication2.csproj.CopyComplete

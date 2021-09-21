@@ -1,17 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "service bus", "service bus\service bus.csproj", "{ECC63036-6DB9-4AD5-A18A-E278EAFA10A2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{A89416AA-CE96-4C08-B83F-F03B04274B01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{4F8F5E29-9736-4958-84C5-D99C515FD234}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{2CAFAD1F-21C1-4FDF-B76C-DF7655CD271B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{ECC63036-6DB9-4AD5-A18A-E278EAFA10A2} = {ECC63036-6DB9-4AD5-A18A-E278EAFA10A2}
+		{AD1A88F6-B05F-4DC1-A20F-54565361FC81} = {AD1A88F6-B05F-4DC1-A20F-54565361FC81}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceApp", "WcfServiceApp\WcfServiceApp.csproj", "{AD1A88F6-B05F-4DC1-A20F-54565361FC81}"
@@ -35,10 +34,6 @@ Global
 		{A89416AA-CE96-4C08-B83F-F03B04274B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A89416AA-CE96-4C08-B83F-F03B04274B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A89416AA-CE96-4C08-B83F-F03B04274B01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F8F5E29-9736-4958-84C5-D99C515FD234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F8F5E29-9736-4958-84C5-D99C515FD234}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F8F5E29-9736-4958-84C5-D99C515FD234}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F8F5E29-9736-4958-84C5-D99C515FD234}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2CAFAD1F-21C1-4FDF-B76C-DF7655CD271B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2CAFAD1F-21C1-4FDF-B76C-DF7655CD271B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CAFAD1F-21C1-4FDF-B76C-DF7655CD271B}.Release|Any CPU.ActiveCfg = Release|Any CPU

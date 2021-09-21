@@ -1,17 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "S5FDBILxBeYyooEWOwrd25i8SeAhWMuACJgt38kj7URfNK/ZfusSlt7tTM78CfNG9qWOxxT8JI0qNhZubsFbBw==",
-  "success": true,
+  "dgSpecHash": "HEH2HoXihHxfTdKjhYzzIsAXPLuNgYlwTo7NgUxzdnAwlRH6tOswslR01BHIWh4meLqZxy2kxY2nePtYcFUy6g==",
+  "success": false,
   "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\service_bus\\service bus\\WinFormsApp1\\WinFormsApp1.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ADMIN\\.nuget\\packages\\m2mqtt\\4.3.0\\m2mqtt.4.3.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": [
     {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'M2Mqtt 4.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package M2Mqtt with version (>= 4.7.1)\r\n  - Found 19 version(s) in nuget.org [ Nearest version: 4.3.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
       "libraryId": "M2Mqtt",
       "targetGraphs": [
         "net5.0-windows7.0"

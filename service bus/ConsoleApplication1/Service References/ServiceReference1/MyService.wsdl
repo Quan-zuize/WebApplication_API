@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MyService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50073/MyService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50073/MyService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50073/MyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceApp" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMyService_GetAllUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUser" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_GetAllUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_GetSvById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSvById" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_GetSvById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSvByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddSv_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSv" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddSv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_UpdateSv_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSv" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_UpdateSv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteSvById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSvById" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteSvById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSvByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMyService">
+    <wsdl:operation name="GetAllUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/GetAllUser" message="tns:IMyService_GetAllUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/GetAllUserResponse" message="tns:IMyService_GetAllUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSvById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/GetSvById" message="tns:IMyService_GetSvById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/GetSvByIdResponse" message="tns:IMyService_GetSvById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/AddSv" message="tns:IMyService_AddSv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/AddSvResponse" message="tns:IMyService_AddSv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/UpdateSv" message="tns:IMyService_UpdateSv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/UpdateSvResponse" message="tns:IMyService_UpdateSv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSvById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DeleteSvById" message="tns:IMyService_DeleteSvById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DeleteSvByIdResponse" message="tns:IMyService_DeleteSvById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMyService" type="tns:IMyService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllUser">
+      <soap:operation soapAction="http://tempuri.org/IMyService/GetAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSvById">
+      <soap:operation soapAction="http://tempuri.org/IMyService/GetSvById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSv">
+      <soap:operation soapAction="http://tempuri.org/IMyService/AddSv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSv">
+      <soap:operation soapAction="http://tempuri.org/IMyService/UpdateSv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSvById">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DeleteSvById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyService">
+    <wsdl:port name="BasicHttpBinding_IMyService" binding="tns:BasicHttpBinding_IMyService">
+      <soap:address location="http://localhost:50073/MyService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -5,3 +5,9 @@ C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\bin\M2Mqtt.Net.d
 C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\bin\M2Mqtt.Net.pdb
 C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\obj\Debug\service bus.dll
 C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\obj\Debug\service bus.pdb
+C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\obj\Debug\service bus.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\obj\Debug\service bus.csproj.CopyComplete
+C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\bin\EntityFramework.dll
+C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\bin\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\bin\EntityFramework.xml
+C:\Users\ADMIN\source\repos\service_bus\service bus\service bus\bin\EntityFramework.SqlServer.xml

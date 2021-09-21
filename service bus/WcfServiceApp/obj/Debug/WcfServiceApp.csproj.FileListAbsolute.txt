@@ -20,3 +20,6 @@ C:\Users\ADMIN\source\repos\service_bus\service bus\WcfServiceApp\bin\Microsoft.
 C:\Users\ADMIN\source\repos\service_bus\service bus\WcfServiceApp\bin\Microsoft.ApplicationInsights.xml
 C:\Users\ADMIN\source\repos\service_bus\service bus\WcfServiceApp\obj\Debug\WcfServiceApp.dll
 C:\Users\ADMIN\source\repos\service_bus\service bus\WcfServiceApp\obj\Debug\WcfServiceApp.pdb
+C:\Users\ADMIN\source\repos\service_bus\service bus\WcfServiceApp\obj\Debug\WcfServiceApp.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\service_bus\service bus\WcfServiceApp\obj\Debug\WcfServiceApp.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\service_bus\service bus\WcfServiceApp\obj\Debug\WcfServiceApp.csproj.CopyComplete

@@ -3,3 +3,4 @@ C:\Users\ADMIN\source\repos\service_bus\service bus\ConsoleApplication1\bin\Debu
 C:\Users\ADMIN\source\repos\service_bus\service bus\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\ADMIN\source\repos\service_bus\service bus\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\ADMIN\source\repos\service_bus\service bus\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\ADMIN\source\repos\service_bus\service bus\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -13,45 +14,55 @@ namespace service_bus
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public List<Sinh_Vien> GetSinhVien()
         {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
+            List<Sinh_Vien> sinhViens = new List<Sinh_Vien>();
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-F1EG3ID\SQLEXPRESS;Initial Catalog=StudentManagement;Integrated Security=True");
+            string sql = "select * from Sinh_Vien ";
+            try
             {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
-        }
-        public List<Student> GetSinhVien()
-        {
-            List<Student> list = Student.GetSinhVien();
-            return list;
-        }
-        public Student addStudent(Student s)
-        {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-03RSBTH;Initial Catalog=GetStudent;Integrated Security=True");
+                con.Open();
+                SqlCommand com = new SqlCommand(sql, con);
 
-            string sql = "insert into Student(Id,Name) values(@Id,@Name)";
+                SqlDataAdapter da = new SqlDataAdapter(com);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                con.Close();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    sinhViens.Add(new Sinh_Vien()
+                    {
+                        MaSV = row["MaSV"].ToString(),
+                        HoSV = row["HoSV"].ToString(),
+                        TenSV = row["TenSV"].ToString(),
+                        NgaySinh = DateTime.ParseExact(row["NgaySinh"].ToString(), "dddd, dd MMMM yyyy", System.Globalization.CultureInfo.InvariantCulture),
+                        GioiTinh = row["GioiTinh"].ToString(),
+                        MaKhoa = row["MaKhoa"].ToString()
+                    });
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return sinhViens;
+        }
+        public Sinh_Vien addStudent(Sinh_Vien s)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-F1EG3ID\SQLEXPRESS;Initial Catalog=StudentManagement;Integrated Security=True");
+
+            string sql = "insert into Sinh_Vien(HoSV,TenSV,NgaySinh,GioiTinh,MaKhoa) values(@HoSV,@TenSV,@NgaySinh,@GioiTinh,@MaKhoa)";
             SqlCommand com = new SqlCommand(sql, con);
-            com.Parameters.AddWithValue("@Name", s.Name);
-            com.Parameters.AddWithValue("@Email", s.Id);
+            com.Parameters.AddWithValue("@HoSV", s.HoSV);
+            com.Parameters.AddWithValue("@TenSV", s.TenSV);
+            com.Parameters.AddWithValue("@NgaySinh", s.NgaySinh);
+            com.Parameters.AddWithValue("@GioiTinh", s.GioiTinh);
+            com.Parameters.AddWithValue("@MaKhoa", s.MaKhoa);
             con.Open();
             com.ExecuteNonQuery();
             con.Close();
             return s;
-        }
-
-        public Student addStudent()
-        {
-            throw new NotImplementedException();
         }
     }
 }
