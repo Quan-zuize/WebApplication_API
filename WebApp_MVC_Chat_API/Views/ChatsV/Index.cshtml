@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #md {
+        height : 450px ;
+        width : 400px;
+        background-color:aquamarine ;
+    }
+</style>
+
+<h2>Index</h2>
+<script type="text/javascript">
+    setInterval(reload, 2500);
+   // setInterval(hamCuaToi, 2500);
+    //Window.setInterval    ->  casi hafm nafy laf cuar wwindow cuar trinhd duyeet 
+    setInterval(getChats, 2500);
+
+    var count = 0;
+    function reload() {
+        document.getElementById('myIframe').contentWindow.location.reload(true);
+    }
+    // api/Chats
+    var url = "http://localhost:60387/api/Chats";
+
+    function getChats() {
+        count++;
+     //   alert("hello :" + count);
+        $.get(url, function (data, success) {
+          //  alert("abc  : " + data);
+            var mm = data.count;
+            var mydata = '';
+            for (i = 0; ; i++) {
+                if (data[i] == undefined) { break; }
+               
+                mydata += " " + data[i].Name + ". " + data[i].Content + "; ";
+            }
+            $("#md").html('<br>\n' + count + ': '+ mydata);
+
+        });
+    }
+
+</script>
+<form>
+
+</form>
+<br/>
+
+<iframe src="http://localhost:60387/ChatsV/GetAllChats" id="myIframe" name="myIframe">
+
+</iframe>
+<div id="md" />
+
+
